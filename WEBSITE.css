@@ -1,0 +1,89 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background: linear-gradient(white,blue);
+   font-family:'Noto Sans JP', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1% 1fr 1fr 1fr 1% ;
+    
+    grid-template-rows: 1.5% 1fr 1fr 3% 1.5%;
+    height: 100vh;
+}
+h1{
+    overflow:hidden; 
+    grid-column: 2/4;
+    grid-row: 2/4;
+    color:blue;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 21px;
+    font-weight: 360;
+}
+
+.info{
+    grid-column: 4;
+    grid-row: 2;
+    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 450;
+    word-spacing: 20px;
+    justify-self: right;
+}
+
+a:link {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+    
+  }
+a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:hover {
+    color:gray;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+@media (max-width:740px) { 
+
+    h1 {grid-column: 2/5;
+        grid-row: 2/4;
+        color: blue;
+        font-size: 21px;
+    }
+
+    .info{
+        grid-column: 2/5;
+        grid-row: 4;
+        font-size: 20px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 450;
+        word-spacing: 20px;
+        justify-self: center
+    }
+    
+    a:link {
+        color: white;
+        text-decoration: none;
+        
+      }
+    a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+    a:hover {
+        color:gray;
+        background-color: transparent;
+        text-decoration: none;
+    }
+}
